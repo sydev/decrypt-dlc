@@ -1,0 +1,26 @@
+{
+  "name": "decrypt-dlc",
+  "version": "0.0.1",
+  "description": "Decrypt DLC files with http://dcrypt.it/",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "dlc",
+    "DLC",
+    "decrypt",
+    "read"
+  ],
+  "author": {
+    "name": "Dominik Winter",
+    "email": "dominik.winter92@gmail.com"
+  },
+  "license": "MIT",
+  "jshintConfig": {
+    "esnext": true
+  },
+  "dependencies": {
+    "request": "2.79.0"
+  }
+}
