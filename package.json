@@ -1,10 +1,14 @@
 {
   "name": "decrypt-dlc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Decrypt DLC files with http://dcrypt.it/",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sydev/decrypt-dlc"
   },
   "keywords": [
     "dlc",
@@ -26,5 +30,9 @@
   },
   "dependencies": {
     "request": "2.79.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }

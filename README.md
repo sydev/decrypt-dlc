@@ -1,11 +1,13 @@
 # decrypt-dlc
 
-Decrypt DLC files with http://dcrypt.it/
+Decrypt DLC files with http://dcrypt.it/.
+Thanks to these awesome guys for the permission to write this module :)
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Development](#development)
 -	[Release Notes](#release-notes)
 
 
@@ -17,7 +19,7 @@ npm install --save decrypt-dlc
 
 ## Usage
 
-```JavaScript
+``` js
 const decrypt = require('decrypt-dlc');
 
 decrypt('path/to/DLC/file', (err, response) => {
@@ -30,6 +32,13 @@ decrypt('path/to/DLC/file', (err, response) => {
 });
 ```
 
+## Development
+
+```
+$ npm test
+```
+
 ## Release Notes
 
+- ```0.0.2``` - Add testing functionality
 - ```0.0.1``` - Initial Release
