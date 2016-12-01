@@ -4,7 +4,7 @@
   "description": "Decrypt DLC files with http://dcrypt.it/",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -20,19 +20,23 @@
     "links",
     "url"
   ],
-  "author": {
-    "name": "Dominik Winter",
-    "email": "dominik.winter92@gmail.com"
-  },
+  "author": "Dominik Winter <dominik.winter92@gmail.com>",
   "license": "MIT",
-  "jshintConfig": {
-    "esnext": true
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    }
   },
   "dependencies": {
     "request": "2.79.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "ava": "^0.17.0"
+  },
+  "ava": {
+    "files": [
+      "test/test.js"
+    ]
   }
 }
