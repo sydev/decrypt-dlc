@@ -1,7 +1,7 @@
 # decrypt-dlc
 
-Decrypt DLC files with http://dcrypt.it/.
-Thanks to these awesome guys for the permission to write this module :)
+> Decrypt DLC files with http://dcrypt.it/.
+> Thanks to these awesome guys for the permission to write this module :)
 
 ## Table of Contents
 
@@ -9,6 +9,7 @@ Thanks to these awesome guys for the permission to write this module :)
 - [Usage](#usage)
 - [Development](#development)
 -	[Release Notes](#release-notes)
+- [Related](#related)
 
 
 ## Installation
@@ -42,3 +43,7 @@ $ npm test
 
 - ```0.0.2``` - Add testing functionality
 - ```0.0.1``` - Initial Release
+
+## Related
+
+[decrypt-dlc-cli](https://github.com/sydev/decrypt-dlc-cli)
