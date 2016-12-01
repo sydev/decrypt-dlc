@@ -10,7 +10,11 @@
     "dlc",
     "DLC",
     "decrypt",
-    "read"
+    "read",
+    "download",
+    "container",
+    "links",
+    "url"
   ],
   "author": {
     "name": "Dominik Winter",
