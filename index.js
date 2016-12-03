@@ -1,10 +1,10 @@
 (() => {
   'use strict';
 
-  const fs      = require('fs');
-  const path    = require('path');
-  const request = require('request');
-  const url     = require('url');
+  const fs        = require('fs');
+  const path      = require('path');
+  const request   = require('request');
+  const url       = require('url');
 
   const DCRYPT_URL    = 'http://dcrypt.it/';
   const UPLOAD_URL    = url.resolve(DCRYPT_URL, '/decrypt/upload');
@@ -110,9 +110,13 @@
     let json  = JSON.parse(body.replace(/<(\/|)textarea>/g, '')),
       error   = null;
 
-    // Checks if http://dcrypt.it sucessfully decrypt the DLC file
-    if (!json.hasOwnProperty('success')) {
-      error = new Error('No links');
+    // Checks if http://dcrypt.it returns any errors
+    if (json.hasOwnProperty('form_errors')) {
+      let error_key = Object.keys(json.form_errors)[0],
+        error_value = json.form_errors[error_key][0].replace(/(<([^>]+)>)/ig, ''); // strip html tags
+
+      error = new Error(error_value);
+      json  = null;
     }
 
     cb(error, json);
