@@ -82,7 +82,7 @@ $ npm test
 - ```1.0.0```
   - Change API, see [Usage](#usage) or [API](#api)
   - Add more endpoints
-  - Add [ava](#https://www.npmjs.com/package/ava) as test engine
+  - Add [ava](https://www.npmjs.com/package/ava) as test engine
 - ```0.0.2``` - Add testing functionality
 - ```0.0.1``` - Initial Release
 
