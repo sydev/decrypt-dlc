@@ -14,10 +14,6 @@ test.cb('container', t => {
   container(TEST_CONTAINER, t.end);
 });
 
-test.cb('cnl', t => {
-  cnl(TEST_CNL, t.end);
-});
-
 test.cb('paste', t => {
   paste(fs.readFileSync(TEST_FILE, 'utf-8'), t.end);
 });

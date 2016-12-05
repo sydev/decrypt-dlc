@@ -125,7 +125,7 @@
   module.exports = exports = {
     upload: upload,
     container: container,
-    cnl: cnl,
+    //cnl: cnl, // currently not fully supported
     paste: paste
   };
 })();

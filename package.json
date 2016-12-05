@@ -1,6 +1,6 @@
 {
   "name": "decrypt-dlc",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Decrypt DLC files with http://dcrypt.it/",
   "main": "index.js",
   "scripts": {
