@@ -18,7 +18,7 @@
    * @param  {Function} cb   callback function
    */
   function upload(file, cb) {
-    let file_path = path.join(process.cwd(), file),
+    let file_path = file,
       file_name   = path.basename(file);
 
     // Upload the DLC file
