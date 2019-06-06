@@ -1,6 +1,6 @@
 {
   "name": "decrypt-dlc",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Decrypt DLC files with http://dcrypt.it/",
   "main": "index.js",
   "scripts": {
@@ -22,17 +22,13 @@
   ],
   "author": "Dominik Winter <dominik.winter92@gmail.com>",
   "license": "MIT",
-  "eslintConfig": {
-    "parserOptions": {
-      "ecmaVersion": 7,
-      "sourceType": "module"
-    }
-  },
   "dependencies": {
-    "request": "2.79.0"
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
   },
   "devDependencies": {
-    "ava": "^0.17.0"
+    "ava": "^2.0.0",
+    "eslint-plugin-node": "^9.1.0"
   },
   "ava": {
     "files": [

@@ -16,69 +16,50 @@
 ## Installation
 
 ```
-$ npm install --save decrypt-dlc
+$ yarn add decrypt-dlc
 ```
 
 ## Usage
 
 ``` js
 const decrypt = require('decrypt-dlc');
-
-// DLC-file upload
-decrypt.upload('path/to/DLC/file', (err, response) => {
-  console.log(response);
-  /* {"success": {
-      "links": [
-        "http://wwww...",
-        ...
-      ]}}*/
-});
-
-// Container URL
-decrypt.container('http://example.com/file.dlc', (err, response) => {
-  console.log(response);
-  /* {"success": {
-      "links": [
-        "http://wwww...",
-        ...
-      ]}}*/
-});
-
-// Paste DLC-file content
 const fs = require('fs');
 
-decrypt.paste(fs.readFileSync('path/to/DLC/file'), (err, response) => {
-  console.log(response);
-  /* {"success": {
-      "links": [
-        "http://wwww...",
-        ...
-      ]}}*/
+(async () => {
+	try {
+		await decrypt.upload('path/to/DLC/file');
+		await decrypt.container('http://example.com/file.dlc');
+		await decrypt.paste(fs.readFileSync('path/to/DLC/file'));
+	} catch (err) {
+		// Handle errors
+	}
 });
 ```
 
 ## API
 
-```decrypt.upload(filepath, callback)```
+```decrypt.upload(filepath)```
 - ```filepath``` String - Path to DLC file
-- ```callback``` Function - Callback function. Has two parameters, error and response
 
-```decrypt.container(url, callback)```
+```decrypt.container(url)```
 - ```url``` String - URL to a DLC-file
-- ```callback``` Function - Callback function. Has two parameters, error and response.
 
-```decrypt.paste(fileContent, callback)```
+```decrypt.paste(fileContent)```
 - ```fileContent``` String - File content of a DLC file.
-- ```callback``` Function - Callback function. Has two parameters, error and response.
+
+All these methods returns an array of urls on success or throws an `Error` if it fails.
 
 ## Development
 
 ```
-$ npm test
+$ yarn test
 ```
 
 ## Release Notes
 
+- ```2.0.0```
+	- Promisified
+	- Change API, see [Usage](#usage) or [API](#api)
 - ```1.0.0```
   - Change API, see [Usage](#usage) or [API](#api)
   - Add more endpoints
