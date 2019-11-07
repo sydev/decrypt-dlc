@@ -57,6 +57,9 @@ $ yarn test
 
 ## Release Notes
 
+- ```2.0.1```
+	- Update dependencies
+	- Close security vulnerabilities
 - ```2.0.0```
 	- Promisified
 	- Change API, see [Usage](#usage) or [API](#api)
